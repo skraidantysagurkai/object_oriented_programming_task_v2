@@ -311,6 +311,17 @@ void V10(){
 }
 
 
+void V12(){
+    std::vector<int> grades{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    Student student1 = Student("Jonas", "Jonaitis");
+    student1.setGradeData(grades);
+
+    Student student2 = Student(student1);
+    Student student3 = student1;
+
+
+
+}
 
 
 int main() {
