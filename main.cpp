@@ -326,7 +326,7 @@ int main() {
 
     while (true) {
         std::cout << "Please choose which release to launch?\n"
-                     "v.01 : 1, v.02 : 2, v.03 : 3, v1.0 : 4\n";
+                     "v.01 : 1, v.02 : 2, v.03 : 3, v1.0 : 4, v1.2 : 6\n";
         std::getline(std::cin, input);
 
         if (input == "1") {
