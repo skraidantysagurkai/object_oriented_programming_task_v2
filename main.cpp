@@ -341,6 +341,9 @@ int main() {
         } else if (input == "4") {
             V10();
             break;
+        } else if (input == "6") {
+            V12();
+            break;
         } else {
             std::cout << "Invalid Input.\n" << std::endl;
         }
