@@ -13,6 +13,13 @@ struct Student {
     std::vector<int> grade_data;
 
     Student(std::string firstName, std::string lastName);
+    Student(const Student &other);  // Copy Constructor
+
+    // Destructor
+    ~Student();
+
+    // Copy Assignment Operator
+    Student &operator=(const Student &other);
 
     const std::string &getFirstName() const;
 
