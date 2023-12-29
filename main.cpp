@@ -318,9 +318,6 @@ void V12(){
 
     Student student2 = Student(student1);
     Student student3 = student1;
-
-
-
 }
 
 
