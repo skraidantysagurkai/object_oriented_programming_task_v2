@@ -7,6 +7,26 @@
 
 std::mutex gradeMutex;
 
+// Destructor
+Student::~Student() {
+    // Perform any necessary cleanup or resource release
+}
+
+// Copy Constructor
+Student::Student(const Student &other)
+        : first_name(other.first_name), last_name(other.last_name), grade_data(other.grade_data) {}
+
+// Copy Assignment Operator
+Student &Student::operator=(const Student &other) {
+    if (this != &other) {
+        // Avoid self-assignment
+        first_name = other.first_name;
+        last_name = other.last_name;
+        grade_data = other.grade_data;
+    }
+    return *this;
+}
+
 Student::Student(std::string firstName, std::string lastName)
         : first_name(std::move(firstName)), last_name(std::move(lastName)) {}
 
