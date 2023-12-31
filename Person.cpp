@@ -8,10 +8,7 @@
 Person::Person(const std::string& firstName, const std::string& lastName)
         : first_name(firstName), last_name(lastName) {}
 
-// Implementation of the pure virtual function
-void Person::displayInfo() const {
-    std::cout << "Person: " << first_name << " " << last_name << std::endl;
-}
+
 
 // Destructor
 Person::~Person() {}

@@ -12,20 +12,19 @@ Student::~Student() {}
 
 // Copy Constructor
 Student::Student(const Student &other)
-        : first_name(other.first_name), last_name(other.last_name), grade_data(other.grade_data) {}
+        : Person(other), grade_data(other.grade_data) {}
 
 // Copy Assignment Operator
 Student &Student::operator=(const Student &other) {
     if (this != &other) {
-        first_name = other.first_name;
-        last_name = other.last_name;
+        Person::operator=(other);
         grade_data = other.grade_data;
     }
     return *this;
 }
 
 Student::Student(std::string firstName, std::string lastName)
-        : first_name(std::move(firstName)), last_name(std::move(lastName)) {}
+        : Person(std::move(firstName), std::move(lastName)) {}
 
 const std::string &Student::getFirstName() const {
     return first_name;
@@ -94,6 +93,11 @@ void Student::generateRandomGrades(int num_of_grades) {
     }
 }
 
+
+void Student::displayInfo() const {
+    std::cout << "Student: " << getFirstName() << " " << getLastName() << std::endl;
+    // Include additional information or actions specific to the Student class
+}
 
 bool studentComp::operator()(const Student &a, const Student &b) {
     if (a.getFirstName() == b.getFirstName()) {
