@@ -13,4 +13,6 @@ add_executable(OP main.cpp
         UserInterface.h
         FileGenerator.cpp
         FileGenerator.h
+        Person.cpp
+        Person.h
 )
