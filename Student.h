@@ -1,23 +1,21 @@
-//
-// Created by Rokas Sabaitis on 2023-10-01.
-//
-
-#ifndef OP_STUDENT_H
-#define OP_STUDENT_H
+// Student.h
+#ifndef STUDENT_H
+#define STUDENT_H
 
 #include "libraries.h"
+#include <string>
+#include <vector>
 
-struct Student {
-    std::string first_name;
-    std::string last_name;
-    std::vector<int> grade_data;
-
+class Student {
+public:
+    // Constructor
     Student(std::string firstName, std::string lastName);
 
+    // Destructor
+    ~Student();
+
     const std::string &getFirstName() const;
-
     const std::string &getLastName() const;
-
     const std::vector<int> &getGradeData() const;
 
     // Function to add integers to the series
@@ -33,11 +31,16 @@ struct Student {
 
     // Function to randomly generate a random series of grades
     void generateRandomGrades(int num_of_grades = 0);
+
+private:
+    std::string first_name;
+    std::string last_name;
+    std::vector<int> grade_data;
 };
 
 // Comparator structure for Student structure
 struct studentComp {
-    inline bool operator()(const Student &a, const Student &b);
+    bool operator()(const Student &a, const Student &b);
 };
 
-#endif //OP_STUDENT_H
+#endif // STUDENT_H
