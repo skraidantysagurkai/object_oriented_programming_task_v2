@@ -105,8 +105,8 @@ We are using the best performing sort from v1.0, using vectors as the list-type 
 | Flag<br/> | Size   | 1000 | 10000 | 100000 | 1000000 | 10000000 |
 |:---------:|--------|:----:|:-----:|:------:|:-------:|:--------:|
 |    -01    | 285 kB | 0 ms | 3 ms  | 30 ms  | 326 ms  | 4770 ms  |
-|    -02    | 156 kB | 0 ms | 0 ms  | 5 ms   | 59 ms   | 3168 ms  |
-|    -03    | 157 kB | 0 ms | 0 ms  | 4 ms   | 46 ms   | 2355 ms  |
+|    -02    | 156 kB | 0 ms | 0 ms  |  5 ms  |  59 ms  | 3168 ms  |
+|    -03    | 157 kB | 0 ms | 0 ms  |  4 ms  |  46 ms  | 2355 ms  |
 
 
 # System parameters:
