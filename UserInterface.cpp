@@ -7,10 +7,10 @@
 #include "Student.h"
 
 bool studentComp::operator()(const Student &a, const Student &b) {
-    if (a.first_name == b.first_name) {
-        return a.last_name < b.last_name;
+    if (a.getFirstName() == b.getFirstName()) {
+        return a.getLastName() < b.getLastName();
     } else {
-        return a.first_name < b.first_name;
+        return a.getFirstName() < b.getFirstName();
     }
 }
 
