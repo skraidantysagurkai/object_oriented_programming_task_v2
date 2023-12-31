@@ -77,6 +77,8 @@ void Student::generateRandomGrades(int num_of_grades) {
     }
 }
 
+Student::~Student() = default;
+
 bool studentComp::operator()(const Student &a, const Student &b) {
     if (a.getFirstName() == b.getFirstName()) {
         return a.getLastName() < b.getLastName();
