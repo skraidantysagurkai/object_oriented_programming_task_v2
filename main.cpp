@@ -310,7 +310,56 @@ void V10(){
     }
 }
 
+void V11(){
+    std::vector<std::string> filePaths = {
+            "../data/gen-1000.csv",
+            "../data/gen-10000.csv",
+            "../data/gen-100000.csv",
+            "../data/gen-1000000.csv",
+            "../data/gen-10000000.csv"
+    };
 
+    bool allFilesExist = true;
+
+    for (const std::string& filePath : filePaths) {
+        std::ifstream file(filePath);
+
+        if (!file.good()) {
+            allFilesExist = false;
+        }
+    }
+
+    // Generating files
+    if (!allFilesExist) {
+        FileGenerator(1000, "../data/gen-1000.csv");
+        FileGenerator(10000, "../data/gen-10000.csv");
+        FileGenerator(100000,"../data/gen-100000.csv");
+        FileGenerator(1000000, "../data/gen-1000000.csv");
+        FileGenerator(10000000, "../data/gen-10000000.csv");
+    }
+
+    for (const std::string& filePath : filePaths) {
+        std::cout << filePath << std::endl;
+
+        TextReader rd = TextReader(filePath);
+
+        std::vector<Student> fileData = rd.getScrapedStudentData();
+        std::vector<Student> under5students;
+        std::vector<Student> over5students;
+
+        auto start = std::chrono::high_resolution_clock::now();
+
+        // Define your criteria using a lambda function
+        auto criteria = [](Student &student) { return student.calculateAverageGrade() < 5; };
+        // Move elements from sourceList to destinationList based on the criteria
+        approach3(fileData, under5students, over5students, criteria);
+
+        auto sort_to_groups_duration = std::chrono::duration_cast<std::chrono::milliseconds>
+                (std::chrono::high_resolution_clock::now() - start);
+
+        std::cout << "Sort Time: " << sort_to_groups_duration.count() << " milliseconds" << std::endl;
+    }
+}
 void V12(){
     std::vector<int> grades{1, 2, 3, 4, 5, 6, 7, 8, 9};
     Student student1 = Student("Jonas", "Jonaitis");
@@ -326,7 +375,8 @@ int main() {
 
     while (true) {
         std::cout << "Please choose which release to launch?\n"
-                     "v.01 : 1, v.02 : 2, v.03 : 3, v1.0 : 4, v1.2 : 6\n";
+                     "v.01 : 1, v.02 : 2, v.03 : 3, v1.0 : 4, v1.1 : 5, v1.2 : 6\n";
+
         std::getline(std::cin, input);
 
         if (input == "1") {
@@ -340,6 +390,9 @@ int main() {
             break;
         } else if (input == "4") {
             V10();
+            break;
+        } else if (input == "5") {
+            V11();
             break;
         } else if (input == "6") {
             V12();

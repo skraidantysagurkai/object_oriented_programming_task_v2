@@ -6,14 +6,6 @@
 #include "UserInterface.h"
 #include "Student.h"
 
-bool studentComp::operator()(const Student &a, const Student &b) {
-    if (a.first_name == b.first_name) {
-        return a.last_name < b.last_name;
-    } else {
-        return a.first_name < b.first_name;
-    }
-}
-
 UserInterface::UserInterface() {
     Greet();
     std::string insert_method = dataInsertMethod();
