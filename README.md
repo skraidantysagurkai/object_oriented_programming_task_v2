@@ -109,10 +109,10 @@ We are using the best performing sort from v1.0, using vectors as the list-type 
 |    -03    | 157 kB | 0 ms | 0 ms  |  4 ms  |  46 ms  | 2355 ms  |
 
 ## V1.2
-The implementation of the rule of three:
+The implementation of the rule of three: \
 <img width="801" alt="Screenshot 2023-12-31 at 17 43 49" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/317bd580-2795-4a79-8fce-4ebf8ec9bea7">
 
-Example of usage:
+Example of usage: \
 <img width="655" alt="Screenshot 2023-12-31 at 17 46 09" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/5b957d85-a6e7-4974-94d2-f8a6705d9832">
 
 
