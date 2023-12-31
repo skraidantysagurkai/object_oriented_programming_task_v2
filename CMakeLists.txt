@@ -16,3 +16,6 @@ add_executable(OP main.cpp
         Person.cpp
         Person.h
 )
+
+# Add optimization flags
+target_compile_options(OP PRIVATE -O3)
