@@ -78,6 +78,21 @@ In approach 3 we create two list type object, inserting students into subsequent
 ### Results:
 * An optimised approach 1 showed better results than approach 2
 
+## V1.1
+In this part I will be changing the datatype of the Student structure to a class.
+### Sorting Speed Tests 
+
+We are using the best performing sort from v1.0, using vectors as the list-type object to hold grades.
+
+| File Size<br/>  | 1000 | 10000 | 100000 | 1000000 | 10000000 |
+|-----------------|:----:|:-----:|:------:|:-------:|:--------:|
+| Vector          | 0 ms | 1 ms  | 18 ms  | 147 ms  | 4308 ms  |
+
+### Results
+* We can see that having Students as a class inevitably creates more overhead thus making our sorting algorithm slower.
+
+
+
 # System parameters:
 * Processor: 2.3GHz Dual-core Intel Core i5
 * Memory: 8 GB 2133 MHz LPDDR3
