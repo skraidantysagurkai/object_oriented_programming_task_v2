@@ -91,6 +91,15 @@ We are using the best performing sort from v1.0, using vectors as the list-type 
 ### Results
 * We can see that having Students as a class inevitably creates more overhead thus making our sorting algorithm slower.
 
+### Flags test
+**As Class:**
+
+| Flag<br/> | Size   | 1000 | 10000 | 100000 | 1000000 | 10000000 |
+|:---------:|--------|:----:|:-----:|:------:|:-------:|:--------:|
+|    -01    | 123 kB | 0 ms | 3 ms  | 37 ms  | 575 ms  | 5260 ms  |
+|    -02    | 159 kB | 0 ms | 0 ms  | 12 ms  | 136 ms  | 3164 ms  |
+|    -03    | 159 kB | 0 ms | 1 ms  | 14 ms  | 147 ms  | 3998 ms  |
+
 
 
 # System parameters:
