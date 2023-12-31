@@ -18,8 +18,6 @@ public:
     // Copy Assignment Operator
     Student &operator=(const Student &other);
 
-    // Destructor
-    ~Student();
 
     const std::string &getFirstName() const;
     const std::string &getLastName() const;
