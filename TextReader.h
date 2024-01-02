@@ -11,8 +11,7 @@
 
 class TextReader {
 public:
-    explicit TextReader(const std::string &fileName, bool vector = true);
-
+    explicit TextReader(const std::string& fileName, bool vector = true);
     TextReader();
 
     std::vector<Student> scraped_student_data;
@@ -20,7 +19,6 @@ public:
     std::string file_path;
 
     std::vector<Student> &getScrapedStudentData();
-
     std::list<Student> &getScrapedStudentDataList();
 
 private:

@@ -30,9 +30,9 @@ TextReader::TextReader() {
     }
 }
 
-TextReader::TextReader(const std::string &fileName, bool vector) {
+TextReader::TextReader(const std::string& fileName, bool vector) {
 
-    if (vector) {
+    if(vector){
         try {
             // Call the function to read the text file
             readStudentDataFromCSV(fileName);
@@ -40,7 +40,8 @@ TextReader::TextReader(const std::string &fileName, bool vector) {
             // Catch and print any exceptions that occurred
             std::cerr << e.what() << std::endl;
         }
-    } else {
+    }
+    else{
         try {
             // Call the function to read the text file
             readStudentDataFromCSV_list(fileName);
@@ -89,7 +90,7 @@ void TextReader::readTextFile(const std::string &file_name) {
 
 std::mutex dataMutex;
 
-void readCSV(const std::string &filename, std::vector<Student> &data, int startLine, int endLine) {
+void readCSV(const std::string& filename, std::vector<Student>& data, int startLine, int endLine) {
     std::ifstream file(filename);
     std::string line;
 
@@ -134,7 +135,7 @@ void readCSV(const std::string &filename, std::vector<Student> &data, int startL
     }
 }
 
-void TextReader::readStudentDataFromCSV(const std::string &fileName) {
+void TextReader::readStudentDataFromCSV(const std::string& fileName) {
 
     const int totalThreads = 4;  // Adjust based on the desired number of threads
 
@@ -160,7 +161,7 @@ void TextReader::readStudentDataFromCSV(const std::string &fileName) {
     }
 
     // Wait for threads to finish
-    for (auto &thread: threads) {
+    for (auto& thread : threads) {
         thread.join();
     }
 }
@@ -173,7 +174,7 @@ std::list<Student> &TextReader::getScrapedStudentDataList() {
     return scraped_student_data_list;
 }
 
-void readCSV_list(const std::string &filename, std::list<Student> &data, int startLine, int endLine) {
+void readCSV_list(const std::string& filename, std::list<Student>& data, int startLine, int endLine) {
     std::ifstream file(filename);
     std::string line;
 
@@ -218,7 +219,7 @@ void readCSV_list(const std::string &filename, std::list<Student> &data, int sta
     }
 }
 
-void TextReader::readStudentDataFromCSV_list(const std::string &fileName) {
+void TextReader::readStudentDataFromCSV_list(const std::string& fileName) {
 
     const int totalThreads = 4;  // Adjust based on the desired number of threads
 
@@ -244,7 +245,7 @@ void TextReader::readStudentDataFromCSV_list(const std::string &fileName) {
     }
 
     // Wait for threads to finish
-    for (auto &thread: threads) {
+    for (auto& thread : threads) {
         thread.join();
     }
 }
