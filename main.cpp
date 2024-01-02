@@ -377,7 +377,7 @@ void V12() {
     student3.displayInfo();
 
     // This line is impossible to build as Person is an abstract class and cannot be constructed.
-    // Person person = Person("Jonas", "Ponaitis");
+    //Person person = Person("Jonas", "Ponaitis");
 }
 
 
