@@ -8,7 +8,7 @@
 std::mutex gradeMutex;
 
 // Destructor
-Student::~Student() {}
+Student::~Student() = default;
 
 // Copy Constructor
 Student::Student(const Student &other)
@@ -24,14 +24,15 @@ Student &Student::operator=(const Student &other) {
 }
 
 Student::Student(std::string firstName, std::string lastName)
-        : Person(std::move(firstName), std::move(lastName)) {}
+        : Person(firstName, lastName) {}
 
-const std::string &Student::getFirstName() const {
-    return first_name;
+
+const std::string& Student::getFirstName() const {
+    return Person::getFirstName();
 }
 
-const std::string &Student::getLastName() const {
-    return last_name;
+const std::string& Student::getLastName() const {
+    return Person::getLastName();
 }
 
 const std::vector<int> &Student::getGradeData() const {
@@ -95,7 +96,7 @@ void Student::generateRandomGrades(int num_of_grades) {
 
 
 void Student::displayInfo() const {
-    std::cout << "Student: " << getFirstName() << " " << getLastName() << std::endl;
+    std::cout << "Student: " << getFirstName() << " " << getLastName() << " " << calculateAverageGrade() << std::endl;
     // Include additional information or actions specific to the Student class
 }
 

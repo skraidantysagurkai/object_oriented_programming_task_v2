@@ -9,6 +9,7 @@
 
 class Student : public Person{
 public:
+
     // Constructor
     Student(std::string firstName, std::string lastName);
     Student(const Student &other);  // Copy Constructor
@@ -41,9 +42,9 @@ public:
     void generateRandomGrades(int num_of_grades = 0);
 
 private:
+    std::vector<int> grade_data;
     std::string first_name;
     std::string last_name;
-    std::vector<int> grade_data;
 };
 
 // Comparator structure for Student structure

@@ -360,13 +360,23 @@ void V11(){
         std::cout << "Sort Time: " << sort_to_groups_duration.count() << " milliseconds" << std::endl;
     }
 }
+
 void V12(){
     std::vector<int> grades{1, 2, 3, 4, 5, 6, 7, 8, 9};
     Student student1 = Student("Jonas", "Jonaitis");
+
     student1.setGradeData(grades);
+    student1.displayInfo();
 
     Student student2 = Student(student1);
+    student2.displayInfo();
+
     Student student3 = student1;
+    student3.displayInfo();
+
+    // This line is impossible to build as Person is an abstract class and cannot be constructed.
+    // Person person = Person("Jonas", "Ponaitis");
+
 }
 
 

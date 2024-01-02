@@ -10,8 +10,10 @@ Person::Person(const std::string& firstName, const std::string& lastName)
 
 
 
+
+
 // Destructor
-Person::~Person() {}
+Person::~Person() = default;
 
 // Copy Constructor
 Person::Person(const Person &other)
