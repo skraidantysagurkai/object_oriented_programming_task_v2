@@ -115,6 +115,8 @@ The implementation of the rule of three: \
 Example of usage: \
 <img width="655" alt="Screenshot 2023-12-31 at 17 46 09" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/5b957d85-a6e7-4974-94d2-f8a6705d9832">
 
+## V1.5
+
 
 
 
