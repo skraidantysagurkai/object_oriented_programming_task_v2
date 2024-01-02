@@ -97,7 +97,6 @@ void Student::generateRandomGrades(int num_of_grades) {
 
 void Student::displayInfo() const {
     std::cout << "Student: " << getFirstName() << " " << getLastName() << " " << calculateAverageGrade() << std::endl;
-    // Include additional information or actions specific to the Student class
 }
 
 bool studentComp::operator()(const Student &a, const Student &b) {

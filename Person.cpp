@@ -8,18 +8,11 @@
 Person::Person(const std::string& firstName, const std::string& lastName)
         : first_name(firstName), last_name(lastName) {}
 
-
-
-
-
-// Destructor
 Person::~Person() = default;
 
-// Copy Constructor
 Person::Person(const Person &other)
         : first_name(other.first_name), last_name(other.last_name) {}
 
-// Copy Assignment Operator
 Person &Person::operator=(const Person &other) {
     if (this != &other) {
         first_name = other.first_name;
