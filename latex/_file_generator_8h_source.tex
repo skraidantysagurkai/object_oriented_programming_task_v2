@@ -1,0 +1,46 @@
+\doxysection{File\+Generator.\+h}
+\hypertarget{_file_generator_8h_source}{}\label{_file_generator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Rokas\ Sabaitis\ on\ 2023-\/10-\/13.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ OP\_FILEGENERATOR\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ OP\_FILEGENERATOR\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}libraries.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_generator}{FileGenerator}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_file_generator}{FileGenerator}}(std::vector<Student>\ data,\ \textcolor{keywordtype}{string}\ fileName);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_file_generator}{FileGenerator}}(std::list<Student>\ data,\ \textcolor{keywordtype}{string}\ fileName);}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_file_generator}{FileGenerator}}(\textcolor{keywordtype}{int}\ len,\ \textcolor{keywordtype}{string}\ fileName);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Student>\ generated\_data;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ generateData(\textcolor{keywordtype}{int}\ student\_num);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ exportStudentDataToCSV(\textcolor{keyword}{const}\ std::vector<Student>\&\ studentData,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ exportStudentDataToCSV(\textcolor{keyword}{const}\ std::list<Student>\&\ studentData,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ writeChunkToCSV(\textcolor{keyword}{const}\ std::vector<Student>\ \&students,\ std::ofstream\ \&outputFile);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ writeChunkToCSVList(\textcolor{keyword}{const}\ std::list<Student>\&\ students,\ std::ofstream\&\ outputFile);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ writeStudentToCSV(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\ \&student,\ std::ofstream\ \&outputFile);}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//OP\_FILEGENERATOR\_H}}
+
+\end{DoxyCode}

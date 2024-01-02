@@ -1,0 +1,100 @@
+\doxysection{Student Class Reference}
+\hypertarget{class_student}{}\label{class_student}\index{Student@{Student}}
+Inheritance diagram for Student\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_student}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_student_a99a0bf35ff287ec0663cb1b1ba54dddc}\label{class_student_a99a0bf35ff287ec0663cb1b1ba54dddc} 
+{\bfseries Student} (std\+::string first\+Name, std\+::string last\+Name)
+\item 
+\Hypertarget{class_student_a05b37ffb050ddb039db63a8764d790cb}\label{class_student_a05b37ffb050ddb039db63a8764d790cb} 
+{\bfseries Student} (const \mbox{\hyperlink{class_student}{Student}} \&other)
+\item 
+\Hypertarget{class_student_ad05dd6148523a2a8b38128b60297b52a}\label{class_student_ad05dd6148523a2a8b38128b60297b52a} 
+\mbox{\hyperlink{class_student}{Student}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_student}{Student}} \&other)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_student_aa77c48d493d142d0cb5f4a2ea388de19}{get\+First\+Name}} () const override
+\item 
+const std\+::string \& \mbox{\hyperlink{class_student_acfda1f5d0a82b538fb2f8103d91a03f3}{get\+Last\+Name}} () const override
+\item 
+\Hypertarget{class_student_a934705260df10d52048d8fcd292216df}\label{class_student_a934705260df10d52048d8fcd292216df} 
+const std\+::vector$<$ int $>$ \& {\bfseries get\+Grade\+Data} () const
+\item 
+void \mbox{\hyperlink{class_student_a2c9a4f3de501947c875af5c1be85bf32}{display\+Info}} () const override
+\item 
+\Hypertarget{class_student_a99fe8d3d01862d5eb70bb2db6e281929}\label{class_student_a99fe8d3d01862d5eb70bb2db6e281929} 
+void {\bfseries add\+\_\+grade} (int num)
+\item 
+\Hypertarget{class_student_adb3a811a1cd0a1dd4bc1051fd236f75e}\label{class_student_adb3a811a1cd0a1dd4bc1051fd236f75e} 
+void {\bfseries set\+Grade\+Data} (const std\+::vector$<$ int $>$ \&grades)
+\item 
+\Hypertarget{class_student_ab16e1e44145119745611483771e721a6}\label{class_student_ab16e1e44145119745611483771e721a6} 
+double {\bfseries calculate\+Average\+Grade} () const
+\item 
+\Hypertarget{class_student_ab013a4e78aa31eb5a59a9798e714ef13}\label{class_student_ab013a4e78aa31eb5a59a9798e714ef13} 
+double {\bfseries calculate\+Median\+Grade} ()
+\item 
+\Hypertarget{class_student_a2d37da43a7089ec56614b29d12a951b4}\label{class_student_a2d37da43a7089ec56614b29d12a951b4} 
+void {\bfseries generate\+Random\+Grades} (int num\+\_\+of\+\_\+grades=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Person} (const std\+::string \&first\+Name, const std\+::string \&last\+Name)
+\item 
+{\bfseries Person} (const \mbox{\hyperlink{class_person}{Person}} \&other)
+\item 
+\mbox{\hyperlink{class_person}{Person}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_person}{Person}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries first\+\_\+name}
+\item 
+std\+::string {\bfseries last\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_student_a2c9a4f3de501947c875af5c1be85bf32}\label{class_student_a2c9a4f3de501947c875af5c1be85bf32} 
+\index{Student@{Student}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Student\+::display\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_person}{Person}}.
+
+\Hypertarget{class_student_aa77c48d493d142d0cb5f4a2ea388de19}\label{class_student_aa77c48d493d142d0cb5f4a2ea388de19} 
+\index{Student@{Student}!getFirstName@{getFirstName}}
+\index{getFirstName@{getFirstName}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getFirstName()}{getFirstName()}}
+{\footnotesize\ttfamily const std\+::string \& Student\+::get\+First\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_person}{Person}}.
+
+\Hypertarget{class_student_acfda1f5d0a82b538fb2f8103d91a03f3}\label{class_student_acfda1f5d0a82b538fb2f8103d91a03f3} 
+\index{Student@{Student}!getLastName@{getLastName}}
+\index{getLastName@{getLastName}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getLastName()}{getLastName()}}
+{\footnotesize\ttfamily const std\+::string \& Student\+::get\+Last\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_person}{Person}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Student.\+h\item 
+Student.\+cpp\end{DoxyCompactItemize}

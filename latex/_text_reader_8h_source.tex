@@ -1,0 +1,39 @@
+\doxysection{Text\+Reader.\+h}
+\hypertarget{_text_reader_8h_source}{}\label{_text_reader_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Rokas\ Sabaitis\ on\ 2023-\/10-\/01.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ OP\_TEXTREADER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ OP\_TEXTREADER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Student.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}libraries.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_text_reader}{TextReader}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_text_reader}{TextReader}}(\textcolor{keyword}{const}\ std::string\&\ fileName,\ \textcolor{keywordtype}{bool}\ vector\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_text_reader}{TextReader}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Student>\ scraped\_student\_data;}
+\DoxyCodeLine{00018\ \ \ \ \ std::list<Student>\ scraped\_student\_data\_list;}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ file\_path;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<Student>\ \&getScrapedStudentData();}
+\DoxyCodeLine{00022\ \ \ \ \ std::list<Student>\ \&getScrapedStudentDataList();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ readTextFile(\textcolor{keyword}{const}\ std::string\ \&file\_name);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ readStudentDataFromCSV(\textcolor{keyword}{const}\ std::string\ \&fileName);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ readTextFile\_list(\textcolor{keyword}{const}\ std::string\ \&file\_name);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ readStudentDataFromCSV\_list(\textcolor{keyword}{const}\ std::string\ \&fileName);}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//OP\_TEXTREADER\_H}}
+
+\end{DoxyCode}
