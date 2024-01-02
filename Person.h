@@ -5,7 +5,7 @@
 
 class Person {
 public:
-    Person(const std::string& firstName, const std::string& lastName);
+    Person(const std::string &firstName, const std::string &lastName);
 
     Person(const Person &other);
 

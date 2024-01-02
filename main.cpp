@@ -6,11 +6,11 @@
 #include <chrono>
 
 
-void V01(){
+void V01() {
     UserInterface();
 }
 
-void V02(){
+void V02() {
     //  FileGenerator(1000, "../data/gen-1000.csv");
     //  FileGenerator(10000, 5000,"../data/gen-10000.csv");
     //  FileGenerator(100000, 5000,"../data/gen-100000.csv");
@@ -25,7 +25,7 @@ void V02(){
             "../data/gen-10000000.csv"
     };
 
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         auto start = std::chrono::high_resolution_clock::now();
@@ -64,7 +64,7 @@ void V02(){
     }
 }
 
-void V03(){
+void V03() {
 
     std::vector<std::string> filePaths = {
             "../data/gen-1000.csv",
@@ -73,7 +73,7 @@ void V03(){
             "../data/gen-1000000.csv",
             "../data/gen-10000000.csv"
     };
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         auto start = std::chrono::high_resolution_clock::now();
@@ -113,16 +113,16 @@ void V03(){
 }
 
 
-template <typename T, typename Predicate>
-void approach2(T& source, T& destination, Predicate predicate) {
+template<typename T, typename Predicate>
+void approach2(T &source, T &destination, Predicate predicate) {
     auto it = std::remove_if(source.begin(), source.end(), predicate);
     destination.insert(destination.end(), std::make_move_iterator(it), std::make_move_iterator(source.end()));
     source.erase(it, source.end());
 }
 
-template <typename T, typename Predicate>
-void approach1(T& source, T& destination1, T& destination2, Predicate predicate) {
-    for (const auto& element : source) {
+template<typename T, typename Predicate>
+void approach1(T &source, T &destination1, T &destination2, Predicate predicate) {
+    for (const auto &element: source) {
         if (predicate(element)) {
             destination1.push_back(element);
         } else {
@@ -131,15 +131,17 @@ void approach1(T& source, T& destination1, T& destination2, Predicate predicate)
     }
 }
 
-template <typename T, typename Predicate>
-void approach3(T& source, T& destination1, T& destination2, Predicate predicate) {
+template<typename T, typename Predicate>
+void approach3(T &source, T &destination1, T &destination2, Predicate predicate) {
     auto partition_point = std::partition(source.begin(), source.end(), predicate);
-    destination1.insert(destination1.end(), std::make_move_iterator(source.begin()), std::make_move_iterator(partition_point));
-    destination2.insert(destination2.end(), std::make_move_iterator(partition_point), std::make_move_iterator(source.end()));
+    destination1.insert(destination1.end(), std::make_move_iterator(source.begin()),
+                        std::make_move_iterator(partition_point));
+    destination2.insert(destination2.end(), std::make_move_iterator(partition_point),
+                        std::make_move_iterator(source.end()));
 }
 
 
-void V10(){
+void V10() {
     std::vector<std::string> filePaths = {
             "../data/gen-1000.csv",
             "../data/gen-10000.csv",
@@ -150,7 +152,7 @@ void V10(){
 
     bool allFilesExist = true;
 
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::ifstream file(filePath);
 
         if (!file.good()) {
@@ -162,7 +164,7 @@ void V10(){
     if (!allFilesExist) {
         FileGenerator(1000, "../data/gen-1000.csv");
         FileGenerator(10000, "../data/gen-10000.csv");
-        FileGenerator(100000,"../data/gen-100000.csv");
+        FileGenerator(100000, "../data/gen-100000.csv");
         FileGenerator(1000000, "../data/gen-1000000.csv");
         FileGenerator(10000000, "../data/gen-10000000.csv");
     }
@@ -170,7 +172,7 @@ void V10(){
 
     std::cout << "Strategy 1" << std::endl;
     std::cout << "LISTS" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath, false);
@@ -193,7 +195,7 @@ void V10(){
     }
 
     std::cout << "VECTOR" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath);
@@ -218,7 +220,7 @@ void V10(){
 
     std::cout << "Strategy 2" << std::endl;
     std::cout << "LISTS" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath, false);
@@ -240,7 +242,7 @@ void V10(){
     }
 
     std::cout << "VECTOR" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath);
@@ -264,7 +266,7 @@ void V10(){
 
     std::cout << "Strategy 3" << std::endl;
     std::cout << "LISTS" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath, false);
@@ -287,7 +289,7 @@ void V10(){
     }
 
     std::cout << "VECTOR" << std::endl;
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath);
@@ -310,7 +312,7 @@ void V10(){
     }
 }
 
-void V11(){
+void V11() {
     std::vector<std::string> filePaths = {
             "../data/gen-1000.csv",
             "../data/gen-10000.csv",
@@ -321,7 +323,7 @@ void V11(){
 
     bool allFilesExist = true;
 
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::ifstream file(filePath);
 
         if (!file.good()) {
@@ -333,12 +335,12 @@ void V11(){
     if (!allFilesExist) {
         FileGenerator(1000, "../data/gen-1000.csv");
         FileGenerator(10000, "../data/gen-10000.csv");
-        FileGenerator(100000,"../data/gen-100000.csv");
+        FileGenerator(100000, "../data/gen-100000.csv");
         FileGenerator(1000000, "../data/gen-1000000.csv");
         FileGenerator(10000000, "../data/gen-10000000.csv");
     }
 
-    for (const std::string& filePath : filePaths) {
+    for (const std::string &filePath: filePaths) {
         std::cout << filePath << std::endl;
 
         TextReader rd = TextReader(filePath);
@@ -361,7 +363,7 @@ void V11(){
     }
 }
 
-void V12(){
+void V12() {
     std::vector<int> grades{1, 2, 3, 4, 5, 6, 7, 8, 9};
     Student student1 = Student("Jonas", "Jonaitis");
 
@@ -376,7 +378,6 @@ void V12(){
 
     // This line is impossible to build as Person is an abstract class and cannot be constructed.
     // Person person = Person("Jonas", "Ponaitis");
-
 }
 
 

@@ -5,7 +5,7 @@
 #include "Person.h"
 #include <iostream>
 
-Person::Person(const std::string& firstName, const std::string& lastName)
+Person::Person(const std::string &firstName, const std::string &lastName)
         : first_name(firstName), last_name(lastName) {}
 
 Person::~Person() = default;

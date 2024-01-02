@@ -23,11 +23,11 @@ FileGenerator::FileGenerator(std::list<Student> data, string fileName) {
 void FileGenerator::generateData(int student_num) {
     for (int i = 0; i < student_num; ++i) {
         std::ostringstream oss;
-        oss << "FirstName_" << i+1;
+        oss << "FirstName_" << i + 1;
         std::string name = oss.str();
 
         std::ostringstream pss;
-        pss << "LastName_" << i+1;
+        pss << "LastName_" << i + 1;
         std::string last_name = pss.str();
 
         Student student = Student(name, last_name);
@@ -36,35 +36,35 @@ void FileGenerator::generateData(int student_num) {
     }
 }
 
-void FileGenerator::writeStudentToCSV(const Student& student, std::ofstream& outputFile) {
+void FileGenerator::writeStudentToCSV(const Student &student, std::ofstream &outputFile) {
     outputFile << student.getFirstName() << "," << student.getLastName();
-    for (int grade : student.getGradeData()) {
+    for (int grade: student.getGradeData()) {
         outputFile << "," << grade;
     }
     outputFile << "\n";
 }
 
-void FileGenerator::writeChunkToCSV(const std::vector<Student>& students, std::ofstream& outputFile) {
+void FileGenerator::writeChunkToCSV(const std::vector<Student> &students, std::ofstream &outputFile) {
     // Acquire lock to ensure exclusive access to the file
     std::lock_guard<std::mutex> lock(fileMutex);
 
     // Write student data to the file
-    for (const auto& student : students) {
+    for (const auto &student: students) {
         writeStudentToCSV(student, outputFile);
     }
 }
 
-void FileGenerator::writeChunkToCSVList(const std::list<Student>& students, std::ofstream& outputFile) {
+void FileGenerator::writeChunkToCSVList(const std::list<Student> &students, std::ofstream &outputFile) {
     // Acquire lock to ensure exclusive access to the file
     std::lock_guard<std::mutex> lock(fileMutex);
 
     // Write student data to the file
-    for (const auto& student : students) {
+    for (const auto &student: students) {
         writeStudentToCSV(student, outputFile);
     }
 }
 
-void FileGenerator::exportStudentDataToCSV(const std::vector<Student>& studentData, const std::string& fileName) {
+void FileGenerator::exportStudentDataToCSV(const std::vector<Student> &studentData, const std::string &fileName) {
     std::remove(fileName.c_str());  // Remove the file if it exists to start fresh
 
     std::ofstream outputFile(fileName);
@@ -80,7 +80,7 @@ void FileGenerator::exportStudentDataToCSV(const std::vector<Student>& studentDa
     const int totalThreads = 4;  // Adjust based on the desired number of threads
 
     // Calculate the number of lines each thread should read
-    int linesPerThread = dataSize/ totalThreads;
+    int linesPerThread = dataSize / totalThreads;
 
 
 
@@ -90,11 +90,13 @@ void FileGenerator::exportStudentDataToCSV(const std::vector<Student>& studentDa
         std::size_t startIdx = i * linesPerThread;
         std::size_t endIdx = std::min((i + 1) * linesPerThread, dataSize);
 
-        threads.emplace_back(writeChunkToCSV, std::vector<Student>(studentData.begin() + startIdx, studentData.begin() + endIdx), std::ref(outputFile));
+        threads.emplace_back(writeChunkToCSV,
+                             std::vector<Student>(studentData.begin() + startIdx, studentData.begin() + endIdx),
+                             std::ref(outputFile));
     }
 
     // Join threads
-    for (auto& thread : threads) {
+    for (auto &thread: threads) {
         thread.join();
     }
 
@@ -103,7 +105,7 @@ void FileGenerator::exportStudentDataToCSV(const std::vector<Student>& studentDa
     std::cout << "CSV file written successfully." << std::endl;
 }
 
-void FileGenerator::exportStudentDataToCSV(const std::list<Student>& studentData, const std::string& fileName) {
+void FileGenerator::exportStudentDataToCSV(const std::list<Student> &studentData, const std::string &fileName) {
     std::remove(fileName.c_str());  // Remove the file if it exists to start fresh
 
     std::ofstream outputFile(fileName);
@@ -119,7 +121,7 @@ void FileGenerator::exportStudentDataToCSV(const std::list<Student>& studentData
     const int totalThreads = 4;  // Adjust based on the desired number of threads
 
     // Calculate the number of lines each thread should read
-    int linesPerThread = dataSize/ totalThreads;
+    int linesPerThread = dataSize / totalThreads;
 
 
 
@@ -140,7 +142,7 @@ void FileGenerator::exportStudentDataToCSV(const std::list<Student>& studentData
     }
 
     // Join threads
-    for (auto& thread : threads) {
+    for (auto &thread: threads) {
         thread.join();
     }
 

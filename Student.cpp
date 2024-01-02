@@ -27,11 +27,11 @@ Student::Student(std::string firstName, std::string lastName)
         : Person(firstName, lastName) {}
 
 
-const std::string& Student::getFirstName() const {
+const std::string &Student::getFirstName() const {
     return Person::getFirstName();
 }
 
-const std::string& Student::getLastName() const {
+const std::string &Student::getLastName() const {
     return Person::getLastName();
 }
 
@@ -44,7 +44,7 @@ void Student::add_grade(int num) {
     grade_data.push_back(num);
 }
 
-void Student::setGradeData(const std::vector<int>& grades) {
+void Student::setGradeData(const std::vector<int> &grades) {
     grade_data = grades;
 }
 
@@ -84,7 +84,7 @@ void Student::generateRandomGrades(int num_of_grades) {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> distribution(1, 10);
 
-    if (num_of_grades == 0){
+    if (num_of_grades == 0) {
         num_of_grades = distribution(gen);
     }
 

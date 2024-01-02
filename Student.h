@@ -7,11 +7,12 @@
 #include <string>
 #include <vector>
 
-class Student : public Person{
+class Student : public Person {
 public:
 
     // Constructor
     Student(std::string firstName, std::string lastName);
+
     Student(const Student &other);  // Copy Constructor
 
     // Destructor
@@ -22,7 +23,9 @@ public:
 
 
     const std::string &getFirstName() const override;
+
     const std::string &getLastName() const override;
+
     const std::vector<int> &getGradeData() const;
 
     void displayInfo() const override;
@@ -30,7 +33,7 @@ public:
     // Function to add integers to the series
     void add_grade(int num);
 
-    void setGradeData(const std::vector<int>& grades);
+    void setGradeData(const std::vector<int> &grades);
 
     // Function to calculate the average of the series
     double calculateAverageGrade() const;
