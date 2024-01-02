@@ -139,10 +139,13 @@ Example of usage: \
 ## V1.5
 
 Person abstract Class implementation: \
+<img width="568" alt="Screenshot 2024-01-02 at 17 12 39" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/804ddea0-eeb2-4ebb-80aa-996cce1c4325">
 
 \
 \
 Example of Person object construction and failed build messages: \
+<img width="769" alt="Screenshot 2024-01-02 at 17 11 58" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/3983e82e-5b93-432b-b1e0-d691b6572946">
+<img width="998" alt="Screenshot 2024-01-02 at 17 11 46" src="https://github.com/skraidantysagurkai/object_oriented_programming_task_v2/assets/31926359/48dd0257-eea7-4ed8-9e5b-1ea25c2d2678">
 
 # System parameters:
 
