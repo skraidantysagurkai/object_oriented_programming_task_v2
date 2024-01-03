@@ -1,6 +1,6 @@
 // Student.h
-#ifndef STUDENT_H
-#define STUDENT_H
+#ifndef OP_V2_STUDENT_H
+#define OP_V2_STUDENT_H
 
 #include "libraries.h"
 #include "Person.h"
@@ -55,4 +55,4 @@ struct studentComp {
     bool operator()(const Student &a, const Student &b);
 };
 
-#endif // STUDENT_H
+#endif //OP_V2_STUDENT_H
