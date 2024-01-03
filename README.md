@@ -7,13 +7,17 @@ After downloading the file please double-click on the .dmg file to open it. \
 And execute the following commands:
 * cd /Volumes/OP_v3
 * ./installer.sh
+
+
 After which the program files will be copied to your system and a shortcut of the executable created in your desktop.
 To run the program, please either double-click the shortcut executable (OP_v3) or the executable in the source files (OP)
 ### When cloning repository
 For running from the terminal:
-g++ main.cpp FileGenerator.cpp Student.cpp TextReader.cpp UserInterface.cpp -o main \
+* g++ main.cpp FileGenerator.cpp Student.cpp TextReader.cpp UserInterface.cpp -o main
+
+  
 And:
-./main
+* ./main
 
 Afterward you will be promoted to choose a version you want to run, please follow the prompted instructions.
 
