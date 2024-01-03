@@ -2,8 +2,8 @@
 // Created by Rokas Sabaitis on 2023-09-28.
 //
 
-#ifndef OP_LIBRARIES_H
-#define OP_LIBRARIES_H
+#ifndef OP_V2_LIBRARIES_H
+#define OP_V2_LIBRARIES_H
 
 #include <iostream>
 #include <sstream>
@@ -23,4 +23,4 @@
 using std::string;
 
 
-#endif //OP_LIBRARIES_H
+#endif //OP_V2_LIBRARIES_H
