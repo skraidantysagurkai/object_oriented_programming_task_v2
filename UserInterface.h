@@ -2,8 +2,8 @@
 // Created by Rokas Sabaitis on 2023-10-01.
 //
 
-#ifndef OP_USERINTERFACE_H
-#define OP_USERINTERFACE_H
+#ifndef OP_V2_USERINTERFACE_H
+#define OP_V2_USERINTERFACE_H
 
 class Student;
 
@@ -31,4 +31,4 @@ private:
     static void printFileContent(std::vector<Student> &student_list);
 };
 
-#endif //OP_USERINTERFACE_H
+#endif //OP_V2_USERINTERFACE_H
