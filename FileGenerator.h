@@ -2,8 +2,8 @@
 // Created by Rokas Sabaitis on 2023-10-13.
 //
 
-#ifndef OP_FILEGENERATOR_H
-#define OP_FILEGENERATOR_H
+#ifndef OP_V2_FILEGENERATOR_H
+#define OP_V2_FILEGENERATOR_H
 #include "libraries.h"
 #include <iostream>
 #include <string>
@@ -38,4 +38,4 @@ private:
 };
 
 
-#endif //OP_FILEGENERATOR_H
+#endif //OP_V2_FILEGENERATOR_H
