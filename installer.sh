@@ -18,4 +18,3 @@ else
     echo "Error: Failed to copy $APP_NAME to $INSTALL_DIR."
     exit 1  # Exit with an error code
 fi
-
