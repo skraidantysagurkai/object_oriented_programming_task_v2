@@ -2,8 +2,8 @@
 // Created by Rokas Sabaitis on 2023-10-01.
 //
 
-#ifndef OP_TEXTREADER_H
-#define OP_TEXTREADER_H
+#ifndef OP_V2_TEXTREADER_H
+#define OP_V2_TEXTREADER_H
 
 #include "Student.h"
 #include "libraries.h"
@@ -31,4 +31,4 @@ private:
     void readStudentDataFromCSV_list(const std::string &fileName);
 };
 
-#endif //OP_TEXTREADER_H
+#endif // OP_V2_TEXTREADER_H
